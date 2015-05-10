@@ -5,5 +5,5 @@
 <u>
 	@foreach($categories as $category)
 		<li>{{ $category->name }}</li>
-	@endforeach;	
+	@endforeach
 </u>
