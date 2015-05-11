@@ -1,4 +1,4 @@
-<h1>Categories</h1>
+<h1>Products</h1>
 <style>
 table{
 	width:100%;
@@ -20,7 +20,10 @@ td{
 			<td>{{ $product->name }}</td>
 			<td>{{ $product->description }}</td>
 			<td>{{ $product->price }}</td>
-			<td>editar excluir</td>
+			<td>
+				<a href="{{ route('products') }}/editar/{{ $product->id }}">editar</a>
+				<a href="{{ route('products') }}/excluir/{{ $product->id }}">excluir</a>
+			</td>
 		</tr>
 	@endforeach
 </table>

@@ -18,7 +18,10 @@ td{
 		<tr>
 			<td>{{ $category->name }}</td>
 			<td>{{ $category->description }}</td>
-			<td>editar excluir</td>
+			<td>
+				<a href="{{ route('categories') }}/editar/{{ $category->id }}">editar</a>
+				<a href="{{ route('categories') }}/excluir/{{ $category->id }}">excluir</a>
+			</td>
 		</tr>
 	@endforeach
 </table>
