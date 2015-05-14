@@ -17,7 +17,7 @@
 
 	@endif
 
-	{!! Form::open(['url' => 'categories.store']) !!}
+	{!! Form::open(['route' => ['categories.store']]) !!}
 
 	<!-- Name Form Input -->
 
