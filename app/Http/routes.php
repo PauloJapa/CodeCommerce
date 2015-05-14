@@ -41,6 +41,19 @@ Route::get('produtos', ['as' => 'produtos', function () {
 // echo route('produtos');die;
 */
 
+
+// Fase 4 do projeto
+Route::get('categories', ['as'=>'categories', 'uses' => 'CategoriesController@index']);
+Route::post('categories', ['as'=>'categories.store', 'uses' => 'CategoriesController@store']);
+Route::get('categories/create', ['as'=>'categories.create', 'uses' => 'CategoriesController@create']);
+Route::get('categories/{id}/create', ['as'=>'categories.destroy', 'uses' => 'CategoriesController@destroy']);
+Route::get('categories/{id}/edit', ['as'=>'categories.edit', 'uses' => 'CategoriesController@edit']);
+Route::post('categories/{id}/update', ['as'=>'categories.update', 'uses' => 'CategoriesController@update']);
+
+
+/*
+// Fase 3 do projeto
+
 Route::pattern('id','[0-9]+');
 
 Route::group(['prefix' => 'admin'], function () {
@@ -52,6 +65,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 	Route::get('products/{action?}/{id?}', ['as' => 'products', 'uses' => 'AdminProductsController@index']);
 });
+*/
 
 Route::get('user/{id?}', function ($id = 123) {
 	if ($id){
