@@ -24,10 +24,11 @@ class ProductTableSeeder extends Seeder {
 		foreach(range(1,50) as $i){
 			Product::create([
 				'name' => $faker->word(),
-				'description' => $faker->text(),
-				'price' => $faker->randomFloat(),
+				'description' => $faker->sentence(),
+				'price' => $faker->randomNumber(2),
 				'featured' => $faker->boolean(),
 				'recommend' => $faker->boolean(),
+				'category_id' => $faker->numberBetween(1,15),
 			]);
 		}
 	}

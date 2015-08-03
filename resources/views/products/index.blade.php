@@ -19,6 +19,7 @@
 			<th>Price</th>
 			<th>Featured</th>
 			<th>Recommend</th>
+			<th>Category</th>
 			<th>Action</th>
 		</tr>
 
@@ -30,6 +31,7 @@
 			<td>{{ $product->price }}</td>
 			<td>{{ $product->featured }}</td>
 			<td>{{ $product->recommend }}</td>
+			<td>{{ $product->category->name }}</td>
 			<td>
 				<a href="{{ route('products.destroy', ['id' => $product->id]) }}">delete</a>
 				|<a href="{{ route('products.edit', ['id' => $product->id]) }}">edit</a>
@@ -38,6 +40,8 @@
 		@endforeach
 
 	</table>
+
+	{!! $products->render() !!}
 
 </div>
 @endsection
