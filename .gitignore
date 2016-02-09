@@ -3,3 +3,5 @@
 .env
 /nbproject/private/
 /nbproject
+.gitignore
+composer.lock
